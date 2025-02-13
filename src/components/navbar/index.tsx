@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className="border-gray-200  dark:border-gray-700 fixed top-0 w-full transition-transform duration-300 ease-in-out"
+      className="border-gray-200 z-10  dark:border-gray-700 fixed top-0 w-full transition-transform duration-300 ease-in-out"
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">

@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin';
+
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -8,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xd: '850px',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
@@ -19,8 +24,24 @@ export default {
         'base-300': '#242535',
         'base-content': '#97989F',
       },
+      textStroke: {
+        custom: '1px black',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke': {
+          '-webkit-text-stroke': '1px black',
+        },
+        '.text-stroke-white': {
+          '-webkit-text-stroke': '1px white',
+        },
+        // Add more variations as needed
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
   darkMode: 'class',
 } satisfies Config;

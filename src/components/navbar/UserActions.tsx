@@ -14,7 +14,7 @@ export default function UserActions() {
   };
 
   return (
-    <ul className="flex items-center space-x-3 rtl:space-x-reverse">
+    <ul className="hidden xd:flex items-center space-x-3 rtl:space-x-reverse">
       <li>{/* <ThemeButton /> */}</li>
       <li>
         <SearchButton />
